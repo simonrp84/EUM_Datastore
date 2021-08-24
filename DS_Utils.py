@@ -234,6 +234,7 @@ def download_files(dataset_list: list,
             print(f'Downloading file {counter} of {n_files}')
         counter += 1
         if os.path.exists(out_filename):
+            print(f"File exists: {out_filename}")
             continue
         cur_time = datetime.utcnow()
         if cur_time > initial_time + timedelta(minutes=20):
